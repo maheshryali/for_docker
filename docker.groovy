@@ -5,9 +5,8 @@ pipeline {
             steps {
                 sh """
                 sudo apt update
-                sudo usermod -aG docker ubuntu
                 docker info
-                docker container run -it alpine bin/bash
+                docker container run alpine 
                 """
             }
         }
