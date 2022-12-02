@@ -8,7 +8,7 @@ pipeline {
                 docker info
                 docker container run  alpine 
                 docker container ls -a
-                docker container image ls
+                docker image ls
                 docker container run -it hello-world /bin/bash
                 """
             }
