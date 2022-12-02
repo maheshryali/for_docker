@@ -8,7 +8,7 @@ pipeline {
                 docker info
                 docker image build -t nginx:latest .
                 docker image ls
-                docker container run --name mahesh nginx:latest
+                docker container run --name mahesh2 nginx:latest
                 docker container ls -a
                 """
             }
