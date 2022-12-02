@@ -6,10 +6,11 @@ pipeline {
                 sh """
                 sudo apt update
                 docker info
-                docker container run  alpine 
-                docker container ls -a
+                cd for_docker
+                docker image build -t nginx:latest .
                 docker image ls
-                docker container run -it hello-world /bin/bash
+                docker run container --name nginxcontainer nginx:latest
+                docker container ls -a
                 """
             }
         }
